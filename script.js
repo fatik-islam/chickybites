@@ -58,7 +58,6 @@ if (menuTrigger && menuLightbox) {
 }
 
 const whatsappButton = document.querySelector('#whatsapp-order');
-const emailButton = document.querySelector('#email-order');
 
 const orderName = document.querySelector('#order-name');
 const orderPhone = document.querySelector('#order-phone');
@@ -112,15 +111,5 @@ if (whatsappButton) {
     const phoneNumber = '923338686289';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener');
-  });
-}
-
-if (emailButton) {
-  emailButton.addEventListener('click', () => {
-    const message = buildOrderMessage();
-    const email = 'abdullahjutt277@gmail.com';
-    const subject = 'Chicky Bites Order';
-    const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    window.location.href = url;
   });
 }
