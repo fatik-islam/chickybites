@@ -61,12 +61,30 @@ const whatsappButton = document.querySelector('#whatsapp-order');
 
 const orderName = document.querySelector('#order-name');
 const orderPhone = document.querySelector('#order-phone');
+const orderBranch = document.querySelector('#order-branch');
 const orderType = document.querySelector('#order-type');
 const orderDetails = document.querySelector('#order-details');
 const orderAddress = document.querySelector('#order-address');
 const addressField = document.querySelector('#address-field');
 
+const branchMap = {
+  jalalpur: {
+    label: 'Jalalpur Jattan (Main Branch)',
+    phone: '923338686289',
+  },
+  karianwala: {
+    label: 'Karianwala Branch',
+    phone: '923072967000',
+  },
+};
+
+const getSelectedBranch = () => {
+  const key = orderBranch?.value || 'jalalpur';
+  return branchMap[key] || branchMap.jalalpur;
+};
+
 const buildOrderMessage = () => {
+  const branch = getSelectedBranch();
   const name = orderName?.value.trim() || '—';
   const phone = orderPhone?.value.trim() || '—';
   const type = orderType?.value || 'delivery';
@@ -75,6 +93,7 @@ const buildOrderMessage = () => {
 
   const lines = [
     'Chicky Bites Order',
+    `Branch: ${branch.label}`,
     `Name: ${name}`,
     `Phone: ${phone}`,
     `Order Type: ${type}`,
@@ -108,7 +127,7 @@ if (orderType) {
 if (whatsappButton) {
   whatsappButton.addEventListener('click', () => {
     const message = buildOrderMessage();
-    const phoneNumber = '923338686289';
+    const { phone: phoneNumber } = getSelectedBranch();
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener');
   });
