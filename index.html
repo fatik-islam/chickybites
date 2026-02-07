@@ -6,7 +6,7 @@
     <title>Chicky Bites Pakistan | Pizza & Fast Food</title>
     <meta
       name="description"
-      content="Chicky Bites Pakistan serves cheesy pizzas, burgers, shawarma, rolls, and family deals in Jalalpur Jattan."
+      content="Chicky Bites Pakistan serves cheesy pizzas, burgers, shawarma, rolls, and family deals in Jalalpur Jattan and Karianwala."
     />
     <link rel="icon" href="assets/logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,7 +60,7 @@
             </h1>
             <p class="lead">
               Chicky Bites Pakistan brings you cheesy pizzas, zinger burgers, shawarma, and
-              crave-worthy deals made fresh in Jalalpur Jattan.
+              crave-worthy deals made fresh in Jalalpur Jattan and Karianwala.
             </p>
             <div class="hero-actions">
               <a class="button" href="#contact">Call to Order</a>
@@ -1204,13 +1204,20 @@
         <div class="container">
           <div class="section-head" data-reveal>
             <p class="eyebrow">Find us</p>
-            <h2>Jalalpur Jattan, Punjab.</h2>
+            <h2>Our branches in Punjab.</h2>
           </div>
           <div class="location-grid">
             <div class="location-card" data-reveal>
-              <h3>Main Branch</h3>
+              <h3>Jalalpur Jattan (Main Branch)</h3>
               <p>Circular Road near Bank Alfalah, Jalalpur Jattan</p>
               <span>Call: +92-333-8686289</span>
+              <span>Hours: 11 AM - 2 AM</span>
+            </div>
+            <div class="location-card" data-reveal>
+              <h3>Karianwala Branch</h3>
+              <p>Malowal Road, Near Tabarak Mega Mall, Karianwala</p>
+              <span>Call: +92-307-2967000</span>
+              <span>Hours: 11 AM - 1 AM</span>
             </div>
             <div class="location-card" data-reveal>
               <h3>Delivery</h3>
@@ -1253,16 +1260,28 @@
             <div class="contact-info">
               <div>
                 <h4>Order Hotline</h4>
-                <a class="contact-link" href="tel:+923338686289">
-                  <span class="icon-inline" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false">
-                      <path
-                        d="M6.6 3.5c.6-.2 1.3 0 1.7.5l2.2 2.7c.4.5.5 1.1.3 1.7l-.8 2.2a1 1 0 0 0 .2 1 12.6 12.6 0 0 0 5 5 1 1 0 0 0 1 .2l2.2-.8c.6-.2 1.2-.1 1.7.3l2.7 2.2c.5.4.7 1.1.5 1.7l-.6 1.9c-.2.6-.7 1-1.3 1.1-2.4.4-8.1-.3-13.4-5.6S3.6 7.7 4 5.3c.1-.6.5-1.1 1.1-1.3l1.5-.5z"
-                      />
-                    </svg>
-                  </span>
-                  +92-333-8686289
-                </a>
+                <div class="social-stack">
+                  <a class="contact-link" href="tel:+923338686289">
+                    <span class="icon-inline" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                          d="M6.6 3.5c.6-.2 1.3 0 1.7.5l2.2 2.7c.4.5.5 1.1.3 1.7l-.8 2.2a1 1 0 0 0 .2 1 12.6 12.6 0 0 0 5 5 1 1 0 0 0 1 .2l2.2-.8c.6-.2 1.2-.1 1.7.3l2.7 2.2c.5.4.7 1.1.5 1.7l-.6 1.9c-.2.6-.7 1-1.3 1.1-2.4.4-8.1-.3-13.4-5.6S3.6 7.7 4 5.3c.1-.6.5-1.1 1.1-1.3l1.5-.5z"
+                        />
+                      </svg>
+                    </span>
+                    Jalalpur Jattan: +92-333-8686289
+                  </a>
+                  <a class="contact-link" href="tel:+923072967000">
+                    <span class="icon-inline" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                          d="M6.6 3.5c.6-.2 1.3 0 1.7.5l2.2 2.7c.4.5.5 1.1.3 1.7l-.8 2.2a1 1 0 0 0 .2 1 12.6 12.6 0 0 0 5 5 1 1 0 0 0 1 .2l2.2-.8c.6-.2 1.2-.1 1.7.3l2.7 2.2c.5.4.7 1.1.5 1.7l-.6 1.9c-.2.6-.7 1-1.3 1.1-2.4.4-8.1-.3-13.4-5.6S3.6 7.7 4 5.3c.1-.6.5-1.1 1.1-1.3l1.5-.5z"
+                        />
+                      </svg>
+                    </span>
+                    Karianwala: +92-307-2967000
+                  </a>
+                </div>
               </div>
               <div>
                 <h4>Social</h4>
@@ -1291,7 +1310,8 @@
               </div>
               <div>
                 <h4>Hours</h4>
-                <p>11 AM - 2 AM</p>
+                <p>Jalalpur Jattan: 11 AM - 2 AM</p>
+                <p>Karianwala: 11 AM - 1 AM</p>
               </div>
             </div>
           </div>
@@ -1304,6 +1324,13 @@
             <label>
               Phone Number
               <input id="order-phone" type="tel" placeholder="03XX XXX XXXX" />
+            </label>
+            <label>
+              Branch
+              <select id="order-branch">
+                <option value="jalalpur">Jalalpur Jattan (Main Branch)</option>
+                <option value="karianwala">Karianwala Branch</option>
+              </select>
             </label>
             <label>
               Order Type
@@ -1351,7 +1378,17 @@
                 />
               </svg>
             </span>
-            +92-333-8686289
+            Jalalpur Jattan: +92-333-8686289
+          </a>
+          <a class="footer-link" href="tel:+923072967000">
+            <span class="icon-inline" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path
+                  d="M6.6 3.5c.6-.2 1.3 0 1.7.5l2.2 2.7c.4.5.5 1.1.3 1.7l-.8 2.2a1 1 0 0 0 .2 1 12.6 12.6 0 0 0 5 5 1 1 0 0 0 1 .2l2.2-.8c.6-.2 1.2-.1 1.7.3l2.7 2.2c.5.4.7 1.1.5 1.7l-.6 1.9c-.2.6-.7 1-1.3 1.1-2.4.4-8.1-.3-13.4-5.6S3.6 7.7 4 5.3c.1-.6.5-1.1 1.1-1.3l1.5-.5z"
+                />
+              </svg>
+            </span>
+            Karianwala: +92-307-2967000
           </a>
           <a class="footer-link" href="https://www.instagram.com/chickybites.pk" target="_blank" rel="noopener">
             <span class="icon-inline" aria-hidden="true">
@@ -1376,9 +1413,12 @@
         </div>
         <div>
           <h4>Address</h4>
-          <p>Circular Road near Bank Alfalah</p>
-          <p>Jalalpur Jattan, Punjab</p>
+          <p>Jalalpur Jattan (Main Branch)</p>
+          <p>Circular Road near Bank Alfalah, Jalalpur Jattan</p>
           <p>Hours: 11 AM - 2 AM</p>
+          <p>Karianwala Branch</p>
+          <p>Malowal Road, Near Tabarak Mega Mall, Karianwala</p>
+          <p>Hours: 11 AM - 1 AM</p>
         </div>
       </div>
       <div class="footer-bottom">
