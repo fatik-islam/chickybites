@@ -224,6 +224,10 @@ a {
   font-size: 14px;
 }
 
+.order-cta {
+  display: none;
+}
+
 .hero {
   padding: 90px 0 70px;
   position: relative;
@@ -979,6 +983,10 @@ textarea:focus {
 @media (max-width: 900px) {
   .nav-toggle {
     display: flex;
+  }
+
+  .order-cta {
+    display: inline-flex;
   }
 
   .nav-links {
