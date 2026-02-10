@@ -43,7 +43,7 @@
             <a href="#deals">Deals</a>
             <a href="#story">About</a>
             <a href="#locations">Location</a>
-            <a href="#contact" class="button button--small">Order Now</a>
+            <a href="#order-form" class="button button--small">Order Now</a>
           </div>
         </nav>
       </div>
@@ -63,7 +63,7 @@
               crave-worthy deals made fresh in Jalalpur Jattan and Karianwala.
             </p>
             <div class="hero-actions">
-              <a class="button" href="#contact">Call to Order</a>
+              <button class="button" type="button" id="call-to-order">Call to Order</button>
               <a class="button button--ghost" href="#menu">View Menu</a>
             </div>
             <div class="hero-stats">
@@ -119,7 +119,7 @@
             <figcaption>Click to zoom and explore every item and price.</figcaption>
           </figure>
 
-          <p class="menu-note" data-reveal>Typed from the menu board for easy reading. Please confirm prices by phone.</p>
+          
 
           <div class="menu-categories">
             <article class="menu-category menu-category--wide" data-reveal>
@@ -1316,7 +1316,7 @@
             </div>
           </div>
 
-          <form class="contact-form" data-reveal>
+          <form id="order-form" class="contact-form" data-reveal>
             <label>
               Full Name
               <input id="order-name" type="text" placeholder="Your name" />
@@ -1431,6 +1431,24 @@
       <div class="menu-lightbox-content">
         <button class="menu-lightbox-close" type="button" aria-label="Close menu image">Close</button>
         <img src="assets/menu.jpg" alt="Chicky Bites full menu board enlarged" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="call-lightbox" id="call-lightbox" aria-hidden="true" role="dialog" aria-label="Call to order">
+      <div class="call-lightbox-content">
+        <button class="call-lightbox-close" type="button" aria-label="Close call options">Close</button>
+        <h3>Call to Order</h3>
+        <p>Choose your branch to call.</p>
+        <div class="call-options">
+          <a class="call-option" href="tel:+923338686289">
+            <span>Jalalpur Jattan (Main Branch)</span>
+            <strong>+92-333-8686289</strong>
+          </a>
+          <a class="call-option" href="tel:+923072967000">
+            <span>Karianwala Branch</span>
+            <strong>+92-307-2967000</strong>
+          </a>
+        </div>
       </div>
     </div>
 
