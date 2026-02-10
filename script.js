@@ -28,18 +28,28 @@ const menuTrigger = document.querySelector('.menu-zoom-trigger');
 const menuLightbox = document.querySelector('#menu-lightbox');
 const menuClose = document.querySelector('.menu-lightbox-close');
 
+const callButton = document.querySelector('#call-to-order');
+const callLightbox = document.querySelector('#call-lightbox');
+const callClose = document.querySelector('.call-lightbox-close');
+
+const setLightboxState = () => {
+  const isMenuOpen = menuLightbox?.classList.contains('is-visible');
+  const isCallOpen = callLightbox?.classList.contains('is-visible');
+  document.body.classList.toggle('lightbox-open', Boolean(isMenuOpen || isCallOpen));
+};
+
 const openMenuLightbox = () => {
   if (!menuLightbox) return;
   menuLightbox.classList.add('is-visible');
   menuLightbox.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('lightbox-open');
+  setLightboxState();
 };
 
 const closeMenuLightbox = () => {
   if (!menuLightbox) return;
   menuLightbox.classList.remove('is-visible');
   menuLightbox.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('lightbox-open');
+  setLightboxState();
 };
 
 if (menuTrigger && menuLightbox) {
@@ -53,6 +63,35 @@ if (menuTrigger && menuLightbox) {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && menuLightbox.classList.contains('is-visible')) {
       closeMenuLightbox();
+    }
+  });
+}
+
+const openCallLightbox = () => {
+  if (!callLightbox) return;
+  callLightbox.classList.add('is-visible');
+  callLightbox.setAttribute('aria-hidden', 'false');
+  setLightboxState();
+};
+
+const closeCallLightbox = () => {
+  if (!callLightbox) return;
+  callLightbox.classList.remove('is-visible');
+  callLightbox.setAttribute('aria-hidden', 'true');
+  setLightboxState();
+};
+
+if (callButton && callLightbox) {
+  callButton.addEventListener('click', openCallLightbox);
+  callClose?.addEventListener('click', closeCallLightbox);
+  callLightbox.addEventListener('click', (event) => {
+    if (event.target === callLightbox) {
+      closeCallLightbox();
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && callLightbox.classList.contains('is-visible')) {
+      closeCallLightbox();
     }
   });
 }
