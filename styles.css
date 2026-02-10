@@ -497,6 +497,88 @@ a {
   background: rgba(7, 17, 44, 1);
 }
 
+.call-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 10, 26, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 36px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+  z-index: 30;
+}
+
+.call-lightbox.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.call-lightbox-content {
+  position: relative;
+  width: min(420px, 92vw);
+  padding: 28px;
+  background: #0b1740;
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 14px;
+  text-align: left;
+}
+
+.call-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(7, 17, 44, 0.9);
+  color: var(--cream);
+  font-weight: 600;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.call-lightbox-close:hover {
+  background: rgba(7, 17, 44, 1);
+}
+
+.call-options {
+  display: grid;
+  gap: 12px;
+}
+
+.call-option {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: rgba(7, 17, 44, 0.65);
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.call-option span {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.call-option strong {
+  font-size: 16px;
+  color: var(--cream);
+}
+
+.call-option:hover {
+  background: rgba(245, 164, 37, 0.12);
+  border-color: rgba(245, 164, 37, 0.5);
+  transform: translateY(-2px);
+}
+
 .menu-board figcaption {
   margin-top: 12px;
   color: var(--muted);
@@ -763,6 +845,7 @@ a {
   background: var(--surface);
   border: 1px solid var(--stroke);
   box-shadow: var(--shadow);
+  scroll-margin-top: 110px;
 }
 
 .contact-form label {
